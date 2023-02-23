@@ -102,4 +102,21 @@ kubectl rollout undo deployment myapp-deployment
 ### Nodeport default range
     -   From 30000 to 32767
 
+### Remember !!! When you declear a SERVICE the specification > selector perameters will be same as DEPLOYMENT's template > metadata > labels
+
+
+### Create a service by YAML file
+```
+kubectl create -f service/service-defination.yaml 
+```
+
+### Check the running services
+```
+kubectl get service -o wide
+```
+
+### Check the service url
+```
+minikube service myapp-prod-deploy --url
+```
 
