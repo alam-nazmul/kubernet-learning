@@ -4,8 +4,8 @@ metadata:
   name: myapp-rc
 spec:
   replicas: 3
-#  selector:
-#    app: myapp
+  selector:
+    app: myapp
   template:
     metadata:
       name: myapp-prod

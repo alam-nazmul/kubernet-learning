@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: myapp-replicaset
+  labels:
+    app: myapp
+spec:
+  # modify replicas according to your case
+  replicas: 2
+  selector:
+    matchLabels:
+      app: myapp-prod
+      type: fornt-end
+  template:
+    metadata:
+      labels:
+        app: myapp-prod
+        type: fornt-end
+    spec:
+      containers:
+      - name: nginx-controller
+        image: nginx

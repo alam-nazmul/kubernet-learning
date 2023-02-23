@@ -17,3 +17,43 @@ kubectl get replicationcontroller
 ```
 kubectl delete replicationcontroller myapp-rc
 ```
+
+### Create a replica-set from a YAML file
+```
+kubectl create -f replica-set.yaml
+```
+
+### Show the replica-set
+```
+kubectl get replicaset -o wide
+```
+
+### Delete the replica-set
+```
+kubectl delete kubectl delete  replicaset myapp-replicaset
+```
+
+### Scaling replica-set by YMAL file
+Edit the YAML file with replicas number then put
+```
+kubectl replace -f replica-set.yaml
+```
+or
+```
+kubectl scale --replicas=3 -f replica-set.yaml
+```
+or
+```
+kubectl scale --replicas=3 replicaset myapp-replicaset
+```
+
+### For details of running Replicaset
+```
+kubectl describe replicaset myapp-replicaset
+``` 
+
+### For edit of running Replicalist
+```
+kubectl edit replicaset myapp-replicaset
+```
+We can change the number of replicas by editing on "replicas" section
