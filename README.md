@@ -120,4 +120,3 @@ kubectl get service -o wide
 ```
 minikube service myapp-prod-deploy --url
 ```
-
