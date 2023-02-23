@@ -78,4 +78,22 @@ kubectl rollout status deployment/myapp-deployment
 ```
 kubectl rollout history deployment/myapp-deployment
 ```
+or
+```
+kubectl rollout history deployment myapp-deployment
+```
 
+### For recoard the deployment logs
+```
+kubectl create -f deployment/deployment.yaml --record
+```
+
+### For rollback the current deployment version to previous one
+```
+kubectl rollout undo deployment myapp-deployment
+```
+
+### Types of Kubernet services
+    -   NodePort
+    -   ClusterIP
+    -   LoadBalancer
