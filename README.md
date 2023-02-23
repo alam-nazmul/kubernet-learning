@@ -57,3 +57,25 @@ kubectl describe replicaset myapp-replicaset
 kubectl edit replicaset myapp-replicaset
 ```
 We can change the number of replicas by editing on "replicas" section
+
+
+### Show all the created objects at once
+```
+kubectl get all
+```
+
+### Deployment create help command
+```
+kubectl create deployment --help
+```
+
+### Rollout status
+```
+kubectl rollout status deployment/myapp-deployment
+```
+
+### Check Rollout history
+```
+kubectl rollout history deployment/myapp-deployment
+```
+
