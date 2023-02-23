@@ -97,3 +97,9 @@ kubectl rollout undo deployment myapp-deployment
     -   NodePort
     -   ClusterIP
     -   LoadBalancer
+
+
+### Nodeport default range
+    -   From 30000 to 32767
+
+
