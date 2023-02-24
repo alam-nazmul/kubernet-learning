@@ -103,7 +103,7 @@ kubectl rollout undo deployment myapp-deployment
     -   From 30000 to 32767
 
 ### Remember !!! 
-_When you declear a SERVICE the specification > selector perameters will be same as DEPLOYMENT's template > metadata > labels_
+_When you declare a SERVICE the specification > selector parameters will be same as DEPLOYMENT's template > metadata > labels_
 
 
 ### Create a service by YAML file

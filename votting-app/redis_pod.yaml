@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: redis-pod
+  labels:
+    app: demo-votting-app
+    name: redis-pod
+spec:
+  containers:
+  - name: redis
+    image: redis
+    resources:
+      limits:
+        cpu: 200m
+        memory: 500Mi
+    ports:
+    - containerPort:  6379

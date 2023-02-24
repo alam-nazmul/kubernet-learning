@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: fornt-end
+spec:
+  selector:
+    app: myapp-prod-deploy
+    type: fornt-end
+  type: LoadBalancer
+  ports:
+  - port: 80
+    targetPort: 80
+    nodePort: 300058

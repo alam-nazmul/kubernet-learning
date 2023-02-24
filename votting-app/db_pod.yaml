@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: db-pod
+  labels:
+    app: demo-votting-app
+    name: db-pod
+spec:
+  containers:
+  - name: db
+    image: postgres
+    resources:
+      limits:
+        cpu: 200m
+        memory: 500Mi
+    ports:
+    - containerPort: 5432
+    env:
+      - name: POSTGRES_USER
+        value: "postgres"
+      - name: POSTGRES_PASSWORD
+        value:  "postgres"
