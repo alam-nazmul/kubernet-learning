@@ -2,6 +2,23 @@
 _This is a kubernet journey from scratch_
 
 
+### Create a pod with images
+```
+kubectl run nginx --image=nginx
+```
+
+### Show pods
+```
+kubectl get pods -o wide
+```
+
+### Show details of a pod
+```
+kubectl describe pod nginx
+```
+
+### Remember !!!!
+_When kind = POD and Service the Version will be v1 and When kind = Replicaset and Deployment the Service will be apps/v1_
 
 ### Create a replication controller from a YAML file
 ```
@@ -120,3 +137,9 @@ kubectl get service -o wide
 ```
 minikube service myapp-prod-deploy --url
 ```
+
+### Check the nodes detail
+```
+kubectl get nodes
+```
+
