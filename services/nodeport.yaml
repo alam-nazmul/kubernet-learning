@@ -1,12 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: myapp-prod-deploy
+  name: myapp-replicaset
   #namespace: default
 spec:
   selector:
-    #app: myapp-prod-deploy
-    type: fornt-end
+      app: myapp-prod
+      type: fornt-end
+      user: devloper
   type: NodePort
   #sessionAffinity: None
   #sessionAffinityConfig:
