@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name:  httpd-frontend
+  labels:
+    app:  MYAPP
+spec:
+  selector:
+    matchLabels:
+      app: httpd-frontend
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app:  httpd-frontend
+    spec:
+      # initContainers:
+        # Init containers are exactly like regular containers, except:
+          # - Init containers always run to completion.
+          # - Each init container must complete successfully before the next one starts.
+      containers:
+      - name:  httpd-frontend
+        image:  httpd:2.4-alpine

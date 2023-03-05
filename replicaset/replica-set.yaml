@@ -3,19 +3,23 @@ kind: ReplicaSet
 metadata:
   name: myapp-replicaset
   labels:
-    app: myapp
+    app: myapp-prod
+    type: fornt-end
+    user: devloper
 spec:
   # modify replicas according to your case
-  replicas: 2
+  replicas: 4
   selector:
     matchLabels:
       app: myapp-prod
       type: fornt-end
+      user: devloper
   template:
     metadata:
       labels:
         app: myapp-prod
         type: fornt-end
+        user: devloper
     spec:
       containers:
       - name: nginx-controller

@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: myapp
+  labels:
+      app: myapp-prod
+      type: fornt-end
+      user: devloper
+spec:
+  containers:
+  - name: nginx-server
+    image: nginx
