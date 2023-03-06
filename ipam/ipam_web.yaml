@@ -1,9 +1,9 @@
 apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
-  name: ipam-db
+  name: ipam-web
   labels:
-    app: ipam-kube
+    app: ipam-kube-web
 spec:
   # modify replicas according to your case
   replicas: 3
@@ -15,12 +15,9 @@ spec:
       labels:
         app: ipam
     spec:
-      containers:
-      - name: db
-        image: mysql:5.6
+      containers:     
+      - name: pam
+        image: pierrecdn/phpipam
         env:
-        - name: MYSQL_ROOT_PASSWORD
+        - name: MYSQL_ENV_MYSQL_ROOT_PASSWORD
           value: nazmul
-        #ports:
-          #- containerPort: 3306
-            #name: mysql
