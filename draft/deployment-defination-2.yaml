@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: redis-deployment
+  labels:
+    type: backend
+    name: cache
+
+spec:
+  selector:
+    matchLabels:
+      stack: backed
+  template:
+    metadata:
+      name: redis-pod
+      labels:
+        stack: backed
+    spec:
+      containers:
+        - name: redis-backend
+          image: redis
+  replicas: 2
