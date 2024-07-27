@@ -17,6 +17,11 @@ kubectl get pods -o wide
 kubectl describe pod nginx
 ```
 
+### Delete the created Pods
+```
+kubectl delete pod nginx
+```
+
 ### Remember !!!!
 _When kind = POD and Service the Version will be v1 and When kind = Replicaset and Deployment the Service will be apps/v1_
 
@@ -75,6 +80,7 @@ kubectl edit replicaset myapp-replicaset
 ```
 We can change the number of replicas by editing on "replicas" section
 
+## The labels of "matchLabels" and "POD" will be same. No matter what is about the label of ReplicaSet
 
 ### Show all the created objects at once
 ```
